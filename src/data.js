@@ -5,8 +5,8 @@ export const ProjectData = [
         title: 'Penguin Runner',
         frontend: "https://github.com/irosen419/penguin-runner-client",
         backend: "https://github.com/irosen419/penguin-runner-api",
-        demoLink: "",
-        liveLink: 'www.penguinswithlasers.ccom',
+        demoLink: "https://www.loom.com/embed/b7e4cc5194e744e58189f050d1d44d3d",
+        liveLink: 'www.penguinswithlasers.com',
         image: window.location.origin + '/penguin_zoom.png'
     },
     {
@@ -15,7 +15,7 @@ export const ProjectData = [
         backend: "https://github.com/irosen419/not_fcebook_backend",
         demoLink: "",
         liveLink: null,
-        image: ""
+        image: window.location.origin + '/not_fcebook.png'
     },
     {
         title: 'Adventure Log',
