@@ -6,7 +6,7 @@ export const ProjectData = [
         frontend: "https://github.com/irosen419/penguin-runner-client",
         backend: "https://github.com/irosen419/penguin-runner-api",
         demoLink: "https://www.loom.com/embed/b7e4cc5194e744e58189f050d1d44d3d",
-        liveLink: 'www.penguinswithlasers.com',
+        liveLink: "www.penguinswithlasers.com",
         image: window.location.origin + '/penguin_zoom.png'
     },
     {

@@ -67,6 +67,7 @@
 }
 
 .card {
+  position: relative;
   width: 25%;
   height: 500px;
   margin: 30px;
@@ -78,11 +79,46 @@
   background-color: whitesmoke;
   box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.5);
 
+    .initial {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     .img-box {
       position: relative;
-      margin-top: 10%;
+      opacity: 0;
+      margin-top: 0;
       width: 75%;
+      height: 0;
+      transition: 300ms;
+    }
+
+    .hover-img-box {
+      opacity: 1;
       height: 50%;
+      margin-top: 10%;
+      transition: 500ms;
+    }
+
+    .buttons {
+      position: relative;
+      opacity: 0;
+      margin-top: 70%;
+      height: -50;
+      transition: 300ms;
+    }
+
+    .hover-buttons {
+      opacity: 1;
+      margin: 0;
+      transition: 500ms;
     }
 
     .screen {
@@ -131,6 +167,7 @@
     .demo {
       margin-top: 50px;
       display: flex;
+      justify-content: center;
     }
 
     .github {
