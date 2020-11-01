@@ -13,7 +13,7 @@
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4"
   },
-  "homepage": "http://irosen419.github.io/ian_rosen_portfolio",
+  "homepage": "http://irosen419.github.io/ian_rosen_portfolio/public/index.html",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
