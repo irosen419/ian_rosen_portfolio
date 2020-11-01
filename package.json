@@ -15,9 +15,9 @@
   },
   "homepage": "http://irosen419.github.io/ian_rosen_portfolio",
   "scripts": {
-    "start": "react-scripts start",
-    "predeploy": "npm-run-build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
