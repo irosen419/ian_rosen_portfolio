@@ -4,11 +4,51 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: black
+}
+
+a:visited {
+  color: black
+}
+
+a:hover {
+  cursor: pointer;
+}
+
 .App {
   height: fit-content;
   button:hover {
     cursor: pointer;
   }
+
+  div#social {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 55%);
+    width: 20%;
+    height: 23.5%;
+
+    border: 1px solid black;
+    border-radius: 43%;
+    
+    font-size: 36px;
+    
+    display: flex;
+    justify-content: center;
+
+    svg {
+      margin: 10px;
+      margin-top: 37px;
+    }
+    
+  }
+  div#social:hover {
+    background-color: rgba(175, 168, 123, 0.5);
+  }
+
 }
 
 
@@ -43,6 +83,11 @@
     }
 }
 
+#about {
+  height: 100vh;
+
+}
+
 #works {
   position: relative;
   height: 100vh;
@@ -51,26 +96,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h1 {
-    
-  }
+
 }
 
 #card-container {
   margin-top: 25px;
   width: fit-content;
   padding: 30px;
+  margin: auto;
   
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 450px 450px 450px;
+  grid-auto-rows: 550px;
+  grid-gap: 30px;
 
 }
 
 .card {
   position: relative;
-  width: 25%;
-  height: 500px;
-  margin: 30px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -89,6 +132,17 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+        .stack {
+          margin-top: 75px;
+          height: 50px;
+          width: 100%;
+          font-size: 48px;
+          display: flex;
+          justify-content: space-evenly;
+          .stack div {
+            margin: auto;
+          }
+        }
     }
 
     .img-box {
@@ -136,17 +190,14 @@
   
       .title {
         display: none;
-        position: absolute;
         z-index: 1000;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        margin-top: 17px;
         width: 100%;
         text-align: center;
         color: rgb(0, 0, 0);
         font-weight: 900;
         font-size: x-large;
-        text-shadow: 1px 1px #ebebeb;
+        // text-shadow: 1px 2px 2px #808080;
       }
 
 
@@ -179,10 +230,10 @@
 .hover-card {
   box-shadow: 8px 16px 8px 0 rgba(0,0,0,0.8);
   transition: 300ms;
-  .screenshot {
-    filter: grayscale(75%);
-    opacity: 0.8;
-  }
+  // .screenshot {
+  //   filter: grayscale(75%);
+  //   opacity: 0.8;
+  // }
 
 }
 

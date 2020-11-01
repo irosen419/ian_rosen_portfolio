@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-function ProjectCard({ project }) {
+
+function ProjectCard({ project, displayModal }) {
     const [hoverCard, setHoverCard] = useState(false)
     const [hoverTitle, setHoverTitle] = useState(false)
-    const [demo, setDemo] = useState(false)
 
     const randomColor = () => {
         const colors = ['dark-pink', 'light-pink', 'dad-yellow', 'darker-blue']
@@ -29,7 +29,8 @@ function ProjectCard({ project }) {
                         <div className="initial">
                             <h1>{project.title}</h1>
                             <div className="stack">
-
+                                {project.backendIcon}
+                                {project.frontendIcon}
                             </div>
                         </div>
                 }
@@ -41,24 +42,14 @@ function ProjectCard({ project }) {
                 </div>
                 <div className={hoverCard ? "buttons hover-buttons" : "buttons"}>
                     <div className="demo">
-                        <button onClick={() => setDemo(true)}><span>Demo</span></button>
-                        {project.liveLink ? <a href={project.liveLink} target="_blank"><button ><span>Try it!</span></button></a> : null}
+                        <button onClick={() => displayModal(project.demoLink)}><span>Demo</span></button>
+                        {project.liveLink ? <a href={project.liveLink} rel="noreferrer" target="_blank"><button ><span>Try it!</span></button></a> : null}
                     </div>
                     <div className="github">
-                        <a href={project.frontend} target="_blank"><button><span>Frontend</span></button></a>
-                        <a href={project.backend} target="_blank"><button><span>Backend</span></button></a>
+                        <a href={project.frontend} rel="noreferrer" target="_blank"><button><span>Frontend</span></button></a>
+                        <a href={project.backend} rel="noreferrer" target="_blank"><button><span>Backend</span></button></a>
                     </div>
                 </div>
-                {demo && project.demoLink ?
-                    <div id='demo-modal'>
-                        <div id="demo-video">
-                            <span onClick={() => setDemo(false)}>x</span>
-                            <iframe src={project.demoLink} frameBorder="0" allowFullScreen></iframe>
-                            {/* webkitallowaullscreen="true" mozallowfullscreen='true */}
-                        </div>
-                    </div>
-                    : null
-                }
             </div>
         </>
     )
