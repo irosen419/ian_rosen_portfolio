@@ -21,7 +21,7 @@ function CardContainer() {
             <div id='demo-modal'>
                 <div id="demo-video">
                     <span onClick={() => setDemo(false)}>x</span>
-                    <iframe src={demoLink} frameBorder="0" allowFullScreen></iframe>
+                    <iframe src={demoLink} title={demoLink.split("/")[4]} frameBorder="0" allowFullScreen></iframe>
                 </div>
             </div>
         )

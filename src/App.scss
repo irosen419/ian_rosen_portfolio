@@ -19,6 +19,7 @@ a:hover {
 
 .App {
   height: fit-content;
+  background-color: rgb(188, 220, 230);
   button:hover {
     cursor: pointer;
   }
@@ -29,10 +30,7 @@ a:hover {
     bottom: 0;
     transform: translate(-50%, 55%);
     width: 20%;
-    height: 23.5%;
-
-    border: 1px solid black;
-    border-radius: 43%;
+    height: 25%;
     
     font-size: 36px;
     
@@ -41,12 +39,9 @@ a:hover {
 
     svg {
       margin: 10px;
-      margin-top: 37px;
+      margin-top: 45px;
     }
     
-  }
-  div#social:hover {
-    background-color: rgba(175, 168, 123, 0.5);
   }
 
 }
@@ -84,29 +79,90 @@ a:hover {
 }
 
 #about {
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 7rem;
+  height: fit-content;
 
+  h1 {
+    text-align: right;
+    margin-right: 13.25rem;
+    font-size: 56px;
+  }
+  p {
+    margin-right: 10rem;
+    margin-top: 1rem;
+    font-size: 36px;
+    height: fit-content;
+    color: rgb(77, 77, 77);
+    
+    span {
+      color: black;
+      font-weight: 500;
+    }
+  }
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 7rem;
+  height: fit-content;
+  
+  h1 {
+    text-align: right;
+    margin-right: 14.75rem;
+    font-size: 56px;
+  }
+  
+  #inner-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    h2 {
+      font-size: 40px;
+      margin-top: 1rem;
+    }
+    
+    #exposure {
+      margin-left: -5rem;
+    }
+    
+    ul {
+      list-style-type: none;
+      font-size: 28px;
+      margin-top: 2rem;
+      color: rgb(77, 77, 77);
+      li {
+        margin-top: 1rem;
+      }
+    }
+
+  }
 }
 
 #works {
   position: relative;
   height: 100vh;
-  background-color: rgb(188, 220, 230);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  h1#projects {
+    font-size: 56px;
+    margin-top: 5rem;
+    margin-left: 15.5rem;
+  }
 
 }
 
 #card-container {
-  margin-top: 25px;
+  // margin-top: 25px;
   width: fit-content;
   padding: 30px;
   margin: auto;
   
   display: grid;
-  grid-template-columns: 450px 450px 450px;
+  grid-template-columns: 25vw 25vw 25vw;
   grid-auto-rows: 550px;
   grid-gap: 30px;
 
