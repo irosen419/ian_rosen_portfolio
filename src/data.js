@@ -1,28 +1,34 @@
-
+import * as SiIcons from 'react-icons/si'
 
 export const ProjectData = [
     {
         title: 'Penguin Runner',
         frontend: "https://github.com/irosen419/penguin-runner-client",
         backend: "https://github.com/irosen419/penguin-runner-api",
-        demoLink: "",
-        liveLink: 'www.penguinswithlasers.ccom',
-        image: window.location.origin + '/penguin_zoom.png'
+        demoLink: "https://www.loom.com/embed/b7e4cc5194e744e58189f050d1d44d3d",
+        liveLink: "www.penguinswithlasers.com",
+        image: window.location.origin + '/penguin_zoom.png',
+        backendIcon: <div className="backend"><SiIcons.SiRails /></div>,
+        frontendIcon: <div className="frontend"><SiIcons.SiJavascript /></div>
     },
     {
         title: '!fcebook',
         frontend: "https://github.com/irosen419/not_fcebook_frontend",
         backend: "https://github.com/irosen419/not_fcebook_backend",
-        demoLink: "",
+        demoLink: "https://www.loom.com/embed/aa8ad6229ec749289a34815b787a5d21",
         liveLink: null,
-        image: ""
+        image: window.location.origin + '/not_fcebook.png',
+        backendIcon: <div className="backend"><SiIcons.SiRails /></div>,
+        frontendIcon: <div className="frontend"><SiIcons.SiReact /></div>
     },
     {
         title: 'Adventure Log',
         frontend: "https://github.com/irosen419/adventure_log_frontend",
         backend: "https://github.com/irosen419/adventure_log_backend",
-        demoLink: "",
+        demoLink: "https://www.loom.com/embed/6e686f67d2bd48bbad23e9533dc5032b",
         liveLink: null,
-        image: window.location.origin + '/adventure_log.png'
+        image: window.location.origin + '/adventure_log.png',
+        backendIcon: <div className="backend"><SiIcons.SiRails /></div>,
+        frontendIcon: <div className="frontend"><SiIcons.SiReact /></div>
     }
 ]
