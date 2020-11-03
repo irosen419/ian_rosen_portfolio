@@ -28,6 +28,7 @@ function ProjectCard({ project, displayModal }) {
                         :
                         <div className="initial">
                             <h1>{project.title}</h1>
+                            <h2 className="description">{project.description}</h2>
                             <div className="stack">
                                 {project.backendIcon}
                                 {project.frontendIcon}

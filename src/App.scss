@@ -97,7 +97,7 @@ a:hover {
     }
 
     span {
-      color: #006eb8
+      color: #2F2FA2
     }
 }
 
@@ -194,6 +194,11 @@ a:hover {
       h1 {
         margin: 0;
         font-size: $h2-font;
+      }
+
+      h2 {
+        margin-top: 5%;
+        font-size: 28px;
       }
 
       .initial {
@@ -385,8 +390,6 @@ a:hover {
 
   .App {
     div#social {
-      // margin-bottom: 5%;
-
       font-size: $about-font;
     }
   }
@@ -490,6 +493,10 @@ a:hover {
       .card {
         h1 {
           font-size: $h2-font;
+        }
+
+        h2.description {
+          font-size: 18px;
         }
       }
     }
