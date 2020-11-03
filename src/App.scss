@@ -395,18 +395,18 @@ a:hover {
   }
 
   #intro {
-    padding-left: 0;
+    padding-left: 5%;
 
       h1, h2 {
         color: #000000;
       }
       
       h1 {
-        font-size: 34px;
+        font-size: 30px;
       }
       
       h2 {
-        font-size: 32px;
+        font-size: $h1-font;
       }
   }
 
