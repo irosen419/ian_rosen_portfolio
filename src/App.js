@@ -1,7 +1,7 @@
 import Intro from './Components/Intro'
 import Works from './Containers/Works'
 import About from './Containers/About'
-import Footer from './Components/Footer'
+// import Footer from './Components/Footer'
 import * as FaIcons from 'react-icons/fa'
 import * as CgIcons from 'react-icons/cg'
 import './App.scss';

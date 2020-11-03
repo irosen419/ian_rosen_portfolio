@@ -1,3 +1,18 @@
+$h1-font: 56px;
+$h2-font: 40px;
+$about-font: 36px;
+$ul-font: 28px;
+
+h1 {
+  font-size: $h1-font;
+  text-align: right;
+  margin-right: 13.25rem;
+}
+
+h2 {
+  font-size: $h2-font;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,20 +41,19 @@ a:hover {
 
   div#social {
     position: fixed;
-    left: 50%;
     bottom: 0;
-    transform: translate(-50%, 55%);
-    width: 20%;
-    height: 25%;
-    
-    font-size: 36px;
-    
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 8%;
+    
+    background-color: rgb(133, 133, 133);
+    font-size: $about-font;
 
     svg {
       margin: 10px;
-      margin-top: 55px;
+      margin-bottom: 1%;
     }
     
   }
@@ -56,17 +70,26 @@ a:hover {
 
 #intro {
   position: absolute;
-  top: 52%;
-  left: 46%;
-  transform: translate(-50%, -50%);
+  top: 45%;
+  padding-left: 20%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  background-color: rgba(255,255,255,0.15);
   display: flex;
   flex-direction: column;
-    h1, h2 {
-      color: #000000;
+  align-items: flex-start;
+  justify-content: center;
+  height: fit-content;
+  width: 100%;
+
+  h1, h2 {
+    color: #000000;
+    text-align: left;
     }
     
     h1 {
       font-size: 72px;
+      margin: 0;
     }
     
     h2 {
@@ -81,23 +104,20 @@ a:hover {
 #about {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding-top: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   height: fit-content;
+  background-color: #2F2FA2;
 
-  h1 {
-    text-align: right;
-    margin-right: 13.25rem;
-    font-size: 56px;
-  }
   p {
     margin-right: 10rem;
     margin-top: 1rem;
-    font-size: 36px;
+    font-size: $about-font;
     height: fit-content;
-    color: rgb(77, 77, 77);
+    color: rgb(194, 194, 194);
     
     span {
-      color: black;
+      color: rgb(255, 255, 255);
       font-weight: 500;
     }
   }
@@ -106,33 +126,26 @@ a:hover {
 #skills {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding-top: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   height: fit-content;
-  
-  h1 {
-    text-align: right;
-    margin-right: 14.75rem;
-    font-size: 56px;
-  }
+  background-color: #99738E;
   
   #inner-skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
+    display: flex;
     h2 {
-      font-size: 40px;
       margin-top: 1rem;
     }
     
     #exposure {
-      margin-left: -5rem;
+      margin-left: 10rem;
     }
     
     ul {
       list-style-type: none;
-      font-size: 28px;
+      font-size: $ul-font;
       margin-top: 2rem;
-      color: rgb(77, 77, 77);
+      color: rgb(205, 205, 205);
       li {
         margin-top: 1rem;
       }
@@ -143,155 +156,175 @@ a:hover {
 
 #works {
   position: relative;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
+  background-color: #F64C72;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
-  h1#projects {
-    font-size: 56px;
-    margin-top: 5rem;
-    margin-left: 15.5rem;
+  #title-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 
 }
 
 #card-container {
-  // margin-top: 25px;
   width: fit-content;
   padding: 30px;
   margin: auto;
+  margin-bottom: 5rem;
   
   display: grid;
   grid-template-columns: 25vw 25vw 25vw;
-  grid-auto-rows: 550px;
+  grid-auto-rows: 60vh;
   grid-gap: 30px;
 
-}
+  .card {
+    position: relative;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.5);
+    
+      h1 {
+        margin: 0;
+        font-size: $h2-font;
+      }
 
-.card {
-  position: relative;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 5px;
-  background-color: whitesmoke;
-  box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.5);
-
-    .initial {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-        .stack {
-          margin-top: 75px;
-          height: 50px;
-          width: 100%;
-          font-size: 48px;
-          display: flex;
-          justify-content: space-evenly;
-          .stack div {
-            margin: auto;
-          }
-        }
-    }
-
-    .img-box {
-      position: relative;
-      opacity: 0;
-      margin-top: 0;
-      width: 75%;
-      height: 0;
-      transition: 300ms;
-    }
-
-    .hover-img-box {
-      opacity: 1;
-      height: 50%;
-      margin-top: 10%;
-      transition: 500ms;
-    }
-
-    .buttons {
-      position: relative;
-      opacity: 0;
-      margin-top: 70%;
-      height: -50;
-      transition: 300ms;
-    }
-
-    .hover-buttons {
-      opacity: 1;
-      margin: 0;
-      transition: 500ms;
-    }
-
-    .screen {
-      position: relative;
-      height: 100%;
-      width: 100%;
-    }
-      .screenshot {
-        width: 100%;
+      .initial {
+        position: absolute;
+        top: 0;
+        left: 0;
         height: 100%;
-        border-radius: 5px;
-        object-fit: cover;
-        border: 1px solid black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+          .stack {
+            margin-top: 15%;
+            width: 100%;
+            font-size: 48px;
+            display: flex;
+            justify-content: space-evenly;
+            .stack div {
+              margin: auto;
+            }
+          }
       }
   
-      .title {
-        display: none;
-        z-index: 1000;
-        margin-top: 17px;
-        width: 100%;
-        text-align: center;
-        color: rgb(0, 0, 0);
-        font-weight: 900;
-        font-size: x-large;
-        // text-shadow: 1px 2px 2px #808080;
+      .img-box {
+        position: relative;
+        opacity: 0;
+        margin-top: 0;
+        width: 75%;
+        height: 0;
+        transition: 300ms;
       }
-
-
-    .hover-title {
-      display: block;
-      transition: 1000ms;
-    }
-
-    button {
-      margin: 15px;
-      width: 100px;
-      background-color: #950740;
-      color: white;
-      height: 40px;
-      font-size: large;  
-    }
-
-    .demo {
-      margin-top: 50px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .github {
-      display: flex;
-    }
+  
+      .hover-img-box {
+        opacity: 1;
+        height: 50%;
+        margin-top: 10%;
+        transition: 500ms;
+      }
+  
+      .buttons {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        margin-top: 70%;
+        transition: 300ms;
+      }
+      
+      .hover-buttons {
+        opacity: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        transition: 500ms;
+      }
+  
+      .screen {
+        position: relative;
+        height: 100%;
+        width: 100%;
+      }
+        .screenshot {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          object-fit: cover;
+          border: 1px solid black;
+        }
     
+        .title {
+          display: none;
+          z-index: 1000;
+          margin-top: 17px;
+          width: 100%;
+          text-align: center;
+          color: rgb(0, 0, 0);
+          font-weight: 900;
+          font-size: x-large;
+        }
+  
+  
+      .hover-title {
+        display: block;
+        transition: 1000ms;
+      }
+  
+      button {
+        background-color: #950740;
+        color: white;
+        height: 40px;
+        font-size: large; 
+        width: 100%; 
+      }
+      
+      a {
+        width: 25%;
+        margin: 3%;
+      }
+      
+      .demo {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        #demo-btn {
+          width: 25%;
+          margin: 3%;
+        }
+      }
+      
+      .github {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      
+  }
+  .hover-card {
+    box-shadow: 8px 16px 8px 0 rgba(0,0,0,0.8);
+    transition: 300ms;
+  }
 }
 
-.hover-card {
-  box-shadow: 8px 16px 8px 0 rgba(0,0,0,0.8);
-  transition: 300ms;
-  // .screenshot {
-  //   filter: grayscale(75%);
-  //   opacity: 0.8;
-  // }
 
-}
 
 #demo-modal {
   position: absolute;
@@ -327,19 +360,139 @@ a:hover {
   }
 }
 
-#footer {
-  background-color: whitesmoke;
-  height: 6rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  span {
-    margin-top: 1rem;
-    font-size: 24px;
+// #footer {
+//   background-color: whitesmoke;
+//   height: 6rem;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   span {
+//     margin-top: 1rem;
+//     font-size: 24px;
+//   }
+
+//   #title {
+//     margin-left: 12rem;
+//   }
+// }
+
+@media (max-width: 600px) {
+  $h1-font: 28px;
+  $h2-font: 24px;
+  $about-font: 20px;
+  $ul-font: 16px;
+
+  .App {
+    div#social {
+      // margin-bottom: 5%;
+
+      font-size: $about-font;
+    }
   }
 
-  #title {
-    margin-left: 12rem;
+  #intro {
+    padding-left: 0;
+
+      h1, h2 {
+        color: #000000;
+      }
+      
+      h1 {
+        font-size: 34px;
+      }
+      
+      h2 {
+        font-size: 32px;
+      }
   }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      margin-right: 0;
+    }
+
+    p {
+      margin: auto;
+      padding: 5%;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+  }
+
+  #skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      margin-right: 0;
+    }
+
+    #inner-skills {
+      
+      #exposure {
+        margin-left: 15%;
+      }
+      
+      ul {
+        font-size: $ul-font;
+      }
+    }
+  }
+
+  h1 {
+    font-size: $h1-font;
+  }
+
+  h2 {
+    font-size: $h2-font;;
+  }
+
+  #about {
+    grid-template-columns: 1fr;
+    text-align: start;
+    p {
+    font-size: $about-font;
+    }
+  }
+
+  #works {
+    display: flex;
+    justify-content: center;
+
+    #title-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    #card-container {
+      width: fit-content;
+      padding: 30px;
+      margin: auto;
+      
+      display: grid;
+      grid-template-columns: 75vw;
+      grid-auto-rows: 70vh;
+      grid-gap: 30px;
+  
+      .card {
+        h1 {
+          font-size: $h2-font;
+        }
+      }
+    }
+  }
+
 }

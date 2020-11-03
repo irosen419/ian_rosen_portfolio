@@ -42,7 +42,7 @@ function ProjectCard({ project, displayModal }) {
                 </div>
                 <div className={hoverCard ? "buttons hover-buttons" : "buttons"}>
                     <div className="demo">
-                        <button onClick={() => displayModal(project.demoLink)}><span>Demo</span></button>
+                        <button id="demo-btn" onClick={() => displayModal(project.demoLink)}><span>Demo</span></button>
                         {project.liveLink ? <a href={project.liveLink} rel="noreferrer" target="_blank"><button ><span>Try it!</span></button></a> : null}
                     </div>
                     <div className="github">
