@@ -21,7 +21,6 @@ function App() {
         <a href="https://medium.com/@irosen419" target="_blank" rel="noreferrer"><FaIcons.FaMedium /></a>
         <a href="https://twitter.com/irosen419" target="_blank" rel="noreferrer"><FaIcons.FaTwitter /></a>
         <a href="mailto:irosen419@gmail.com" target="_blank" rel="noreferrer"><CgIcons.CgMail /></a>
-        <a href="./Ian Rosen Resume.pdf" target="_blank" rel="noreferrer"><GrIcons.GrDocumentPdf /></a>
       </div>
     </div>
   );
