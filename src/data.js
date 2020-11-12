@@ -18,7 +18,7 @@ export const ProjectData = [
         frontend: "https://github.com/irosen419/not_fcebook_frontend",
         backend: "https://github.com/irosen419/not_fcebook_backend",
         demoLink: "https://www.loom.com/embed/aa8ad6229ec749289a34815b787a5d21",
-        liveLink: null,
+        liveLink: "https://notfcebook.herokuapp.com/login",
         image: window.location.origin + '/not_fcebook.png',
         backendIcon: <div className="backend"><SiIcons.SiRails /></div>,
         frontendIcon: <div className="frontend"><SiIcons.SiReact /></div>
