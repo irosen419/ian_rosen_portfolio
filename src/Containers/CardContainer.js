@@ -8,7 +8,7 @@ function CardContainer() {
     const [demoLink, setDemoLink] = useState("")
 
     const mapProjects = () => {
-        return ProjectData.map(project => <ProjectCard key={ProjectData.indexOf(project)} project={project} displayModal={displayDemoModal} />)
+        return ProjectData.map(project => <ProjectCard key={project} project={project} displayModal={displayDemoModal} />)
     }
 
     const displayDemoModal = (link) => {

@@ -31,16 +31,16 @@ function About() {
                             <li>Ruby on Rails</li>
                             <li>HTML</li>
                             <li>CSS</li>
-                            <li>GitHub</li>
+                            <li>Git</li>
                         </ul>
                     </div>
                     <div id="exposure">
                         <h2>Exposure</h2>
                         <ul>
+                            <li>GraphQL</li>
                             <li>AWS - S3</li>
-                            <li>JWT</li>
-                            <li>SQL</li>
                             <li>PostgreSQL</li>
+                            <li>SQL</li>
                         </ul>
                     </div>
                 </div>
