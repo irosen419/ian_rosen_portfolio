@@ -6,7 +6,6 @@ import VideoBlogs from './Containers/VideoBlogs'
 import './App.scss';
 
 function App() {
-
   return (
     <div className="App">
       <Intro />

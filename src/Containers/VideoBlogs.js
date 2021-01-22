@@ -6,7 +6,7 @@ function VideoBlogs() {
         <div id="videoBlogs">
             <h1> Video Blogs</h1>
             <div id="videoCards">
-                {VideoInfo.map(video => <VideoCard video={video} />)}
+                {VideoInfo.map(video => <VideoCard key={video.title} video={video} />)}
             </div>
         </div>
     )
