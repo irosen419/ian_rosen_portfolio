@@ -19,7 +19,7 @@ function About() {
                 rare and endangered species.
             </p>
             </div>
-            <div id="skills">
+            <div class="snap" id="skills">
                 <h1>Skills</h1>
                 <div id="inner-skills">
                     <div id="proficient">
