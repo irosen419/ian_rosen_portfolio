@@ -47,6 +47,7 @@ a:hover {
     align-items: center;
     width: 100%;
     height: 8%;
+    z-index: 1000;
     
     background-color: rgb(133, 133, 133);
     font-size: $about-font;
@@ -366,21 +367,47 @@ a:hover {
 }
 
 #videoCards {
+  width: fit-content;
   display: grid;
-  grid-template-columns: 25vw 25vw 25vw;
+  grid-template-columns: 23vw 23vw 23vw;
   grid-auto-rows: 30vh;
-  grid-gap: 30px;
+  grid-gap: 1%;
 
-  width: 75%;
-  margin: auto;
-  padding-bottom: 10%;
+  margin: 0 auto;
+  padding-bottom: 5%;
 
   div.videoCard {
+    position: relative;
     width: 100%;
-
-    border: 1px solid black;
-    border-radius: 5px;
+    // font-weight: 900;
     
+    h3 {
+      // transform: translate(0, -50%);
+      position: absolute;
+      top: 15%;
+      left: 5%;
+      z-index: 2;
+      font-size: 1.5rem;
+      font-weight: 900;
+      font-style: italic;
+      background: rgba(255,255,255,0.25);
+      text-align: left;
+      padding: 0.25rem 1rem;
+      border: none;
+      border-radius: 25px;
+
+      width: fit-content;
+      max-width: 75%;
+
+      color: black;
+    }
+    
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
     img {
       width: 100%;
     }
