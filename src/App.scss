@@ -9,12 +9,15 @@ $ul-font: 28px;
 
 h1 {
   font-size: $h1-font;
+  font-weight: 900;
   text-align: right;
   margin-right: 13.25rem;
+  color: limegreen
 }
 
 h2 {
   font-size: $h2-font;
+  color: rgb(255, 255, 255);;
 }
 
 * {
@@ -37,8 +40,18 @@ a:hover {
 }
 
 .App {
-  height: fit-content;
-  background-color: rgb(188, 220, 230);
+  height: 100vh;
+  background-color: #191b25;
+
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  // scroll-padding-bottom: 5vh;
+
+  div.snap {
+    scroll-snap-align: start;
+  }
+
   button:hover {
     cursor: pointer;
   }
@@ -74,11 +87,7 @@ a:hover {
 }
 
 #intro {
-  position: absolute;
-  top: 45%;
-  padding-left: 20%;
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
+  position: relative;
   background-color: rgba(255,255,255,0.15);
   display: flex;
   flex-direction: column;
@@ -86,6 +95,15 @@ a:hover {
   justify-content: center;
   height: fit-content;
   width: 100%;
+  scroll-snap-align: top;
+
+  #words {
+    position: absolute;
+    top: 45%;
+    padding-left: 20%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+  }
 
   h1, h2 {
     color: #000000;
@@ -112,7 +130,7 @@ a:hover {
   padding-top: 4rem;
   padding-bottom: 4rem;
   height: fit-content;
-  background-color: #2F2FA2;
+  // background-color: #2F2FA2;
 
   p {
     margin-right: 10rem;
@@ -134,7 +152,7 @@ a:hover {
   padding-top: 4rem;
   padding-bottom: 4rem;
   height: fit-content;
-  background-color: #99738E;
+  // background-color: #99738E;
   
   #inner-skills {
     display: flex;
@@ -164,7 +182,6 @@ a:hover {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  background-color: #F64C72;
   padding-top: 4rem;
   padding-bottom: 4rem;
 
@@ -188,22 +205,24 @@ a:hover {
 
   .card {
     position: relative;
-    border: 1px solid black;
+    // border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
     background-color: whitesmoke;
-    box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 0px 0px rgb(160, 160, 160);
     
       h1 {
         margin: 0;
         font-size: $h2-font;
+        color:rgb(0, 0, 0);
       }
 
       h2 {
         margin-top: 5%;
         font-size: 28px;
+        color:rgb(0, 0, 0);
       }
 
       .initial {
@@ -328,10 +347,6 @@ a:hover {
       }
       
   }
-  .hover-card {
-    box-shadow: 8px 16px 8px 0 rgba(0,0,0,0.8);
-    transition: 300ms;
-  }
 }
 
 
@@ -404,8 +419,7 @@ a:hover {
       border-radius: 10px;
       overflow: hidden;
       
-      transition: box-shadow 300ms;
-      box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.5);
+      transition: all 500ms ease-in-out;
       
       h3 {
         position: absolute;
@@ -416,31 +430,45 @@ a:hover {
         font-weight: 900;
         font-style: italic;
         text-align: left;
+        text-decoration: none;
+        transition: all ease-in-out 500ms;
         background: rgba(255,255,255,0.25);
         
         padding: 0.25rem 1rem;
         border: none;
         border-radius: 25px;
-  
+        
         width: fit-content;
         max-width: 75%;
-  
+        
         color: black;
+        
       }
       
       a {
         width: 100%;
         height: 100%;
       }
-
+      
       img {
         width: 100%;
         height:100%;
         object-fit: cover;
+        transition: all 500ms ease-in-out ;
+        &:hover {
+          opacity: 0.5;
+          transition: all 500ms ease-in-out ;
+        }
       }
-
+      
       &:hover {
-        box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.8);
+        
+        h3 {
+          background: rgba(255,255,255,1.0);
+          // border-bottom: 3px solid rgb(0, 0, 0);
+          margin-left: 1.5rem;
+          transition: all 500ms ease-in-out ;
+        }
       }
     }
 

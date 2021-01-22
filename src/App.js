@@ -11,8 +11,8 @@ function App() {
       <Intro />
       <About />
       <Works />
-      <Social />
       <VideoBlogs />
+      <Social />
     </div>
   );
 }

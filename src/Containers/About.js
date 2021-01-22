@@ -1,7 +1,7 @@
 function About() {
     return (
         <>
-            <div id="about">
+            <div class="snap" id="about">
                 <h1>About</h1>
                 <p>
                     After graduating from <span>Elon University</span> with a degree in Biology, I spent six years
