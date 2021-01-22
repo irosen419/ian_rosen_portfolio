@@ -365,22 +365,28 @@ a:hover {
   }
 }
 
-// #footer {
-//   background-color: whitesmoke;
-//   height: 6rem;
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//   span {
-//     margin-top: 1rem;
-//     font-size: 24px;
-//   }
+#videoCards {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw;
+  grid-auto-rows: 30vh;
+  grid-gap: 30px;
 
-//   #title {
-//     margin-left: 12rem;
-//   }
-// }
+  width: 75%;
+  margin: auto;
+  padding-bottom: 10%;
+
+  div.videoCard {
+    width: 100%;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    
+    img {
+      width: 100%;
+    }
+  }
+}
+
 
 @media (max-width: 600px) {
   $h1-font: 28px;
