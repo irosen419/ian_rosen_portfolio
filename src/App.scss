@@ -3,6 +3,10 @@ $h2-font: 40px;
 $about-font: 36px;
 $ul-font: 28px;
 
+// :root {
+//   background-color: pink;
+// }
+
 h1 {
   font-size: $h1-font;
   text-align: right;
@@ -379,7 +383,7 @@ a:hover {
   h1 {
     width: 100%;
     margin: 5% 0;
-    margin-left: 17%;
+    padding-left: 17%;
     text-align: left !important;
   }
   
